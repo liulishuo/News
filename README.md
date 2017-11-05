@@ -1,4 +1,5 @@
 # News
+![image](https://github.com/liulishuo/News/blob/master/Demo.gif)
 
 已完成：
 ==============
@@ -22,3 +23,4 @@
 - **分页**:上拉加载、下拉刷新用MJRefresh
 - **UI界面**:storyboard
 - **信息提示**:有弹窗和HUD两种形式
+
