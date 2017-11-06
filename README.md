@@ -25,3 +25,14 @@
 - **UI界面**:storyboard
 - **信息提示**:有弹窗和HUD两种形式
 
+注意：
+==============
+### 如需配置认证参数 请在AppDelegate.m如下方法内修改
+```objc
+- (void)configureClientInfo {
+    _clientId = @"BtZoBtnOjnUc3tPlkwXs";
+    _clientSecret = @"lMfgxMRZUqGItiEmsgTEddWgNTHqWk4R";
+    _redirectUrl = @"http://www.travelease.com.cn";
+}
+```
+
