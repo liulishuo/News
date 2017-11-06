@@ -22,15 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"登录";
     /*
      测试数据：
      NSString *clientId = @"BtZoBtnOjnUc3tPlkwXs";
-     NSString *clientSecret = @"J7bwzyvEMOxfdQABa2Yk09K4ItSa0sxw";
+     NSString *clientSecret = @"lMfgxMRZUqGItiEmsgTEddWgNTHqWk4R";
      NSString *redirectUrl = @"http://www.travelease.com.cn";
      */
-    self.title = @"登录";
-    NSString *clientId = @"t09FuxDJtotkQknW9L2o";
-    NSString *redirectUrl = @"https://www.baidu.com/";
+    NSString *clientId = @"BtZoBtnOjnUc3tPlkwXs";
+    NSString *redirectUrl = @"http:www.travelease.com.cn";
+    
+//    NSString *clientId = @"t09FuxDJtotkQknW9L2o";
+//    NSString *redirectUrl = @"https://www.baidu.com/";
     NSString *urlString = [NSString stringWithFormat:@"https://www.oschina.net/action/oauth2/authorize?response_type=code&client_id=%@&redirect_uri=%@",clientId,redirectUrl];
     NSCharacterSet *characterSet = [NSCharacterSet  URLQueryAllowedCharacterSet];
     urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:characterSet];

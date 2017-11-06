@@ -15,10 +15,10 @@
                    failure:(LLSAPIFailureHandler)failure {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:LLSReqAccessToken];
     [LLSAPIManager POST:@"token" parameters:@{
-                                              @"client_id":@"t09FuxDJtotkQknW9L2o",
-                                              @"client_secret":@"J7bwzyvEMOxfdQABa2Yk09K4ItSa0sxw",
+                                              @"client_id":@"BtZoBtnOjnUc3tPlkwXs",
+                                          @"client_secret":@"lMfgxMRZUqGItiEmsgTEddWgNTHqWk4R",
                                               @"grant_type":@"authorization_code",
-                                              @"redirect_uri":@"https://www.baidu.com/",
+                                              @"redirect_uri":@"http://www.travelease.com.cn",
                                               @"code":code,
                                               }
               cacheTime:-1
