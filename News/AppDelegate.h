@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, copy) NSString *clientId;
+@property (nonatomic, copy) NSString *clientSecret;
+@property (nonatomic, copy) NSString *redirectUrl;
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "LLSAPIManager+Token.h"
+#import "AppDelegate.h"
 
 @implementation LLSAPIManager (Token)
 
@@ -14,11 +15,17 @@
                    success:(LLSAPISuccessHandler)success
                    failure:(LLSAPIFailureHandler)failure {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:LLSReqAccessToken];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    NSString *clientId = appDelegate.clientId;
+    NSString *redirectUrl = appDelegate.redirectUrl;
+    NSString *clientSecret = appDelegate.clientSecret;
+    
     [LLSAPIManager POST:@"token" parameters:@{
-                                              @"client_id":@"BtZoBtnOjnUc3tPlkwXs",
-                                          @"client_secret":@"lMfgxMRZUqGItiEmsgTEddWgNTHqWk4R",
+                                              @"client_id":clientId,
+                                          @"client_secret":clientSecret,
                                               @"grant_type":@"authorization_code",
-                                              @"redirect_uri":@"http://www.travelease.com.cn",
+                                              @"redirect_uri":redirectUrl,
                                               @"code":code,
                                               }
               cacheTime:-1

@@ -10,6 +10,7 @@
 #import "LLSAPIManager+Token.h"
 #import "LLSAPIManager+User.h"
 #import "NSURL+LLSUtil.h"
+#import "AppDelegate.h"
 
 @interface LLSLoginViewController ()<UIWebViewDelegate>
 
@@ -23,17 +24,11 @@
     [super viewDidLoad];
     
     self.title = @"登录";
-    /*
-     测试数据：
-     NSString *clientId = @"BtZoBtnOjnUc3tPlkwXs";
-     NSString *clientSecret = @"lMfgxMRZUqGItiEmsgTEddWgNTHqWk4R";
-     NSString *redirectUrl = @"http://www.travelease.com.cn";
-     */
-    NSString *clientId = @"BtZoBtnOjnUc3tPlkwXs";
-    NSString *redirectUrl = @"http:www.travelease.com.cn";
+
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    NSString *clientId = appDelegate.clientId;
+    NSString *redirectUrl = appDelegate.redirectUrl;
     
-//    NSString *clientId = @"t09FuxDJtotkQknW9L2o";
-//    NSString *redirectUrl = @"https://www.baidu.com/";
     NSString *urlString = [NSString stringWithFormat:@"https://www.oschina.net/action/oauth2/authorize?response_type=code&client_id=%@&redirect_uri=%@",clientId,redirectUrl];
     NSCharacterSet *characterSet = [NSCharacterSet  URLQueryAllowedCharacterSet];
     urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
