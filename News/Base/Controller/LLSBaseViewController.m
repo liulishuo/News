@@ -37,7 +37,11 @@
         }];
         [self showMessage:@"登录失效，重新登录"];
     } else {
-        [self showMessage:error.localizedDescription];
+        NSString *message = @"请求失败，请重试";
+        if (error.localizedDescription.length) {
+            message = error.localizedDescription;
+        }
+        [self showMessage:message];
     }
 }
 
